@@ -42,11 +42,14 @@ namespace ProductApps
             double delivery;
             double payment;
             double wrap;
+            double gst;
             payment = double.Parse(totalPaymentTextBlock.Text);           
             delivery = payment + 25;
             totalChargeTextBox.Text = delivery.ToString("C");
             wrap = delivery + 5;
             wrapChargeBox.Text = wrap.ToString("C");
+            gst = wrap * 1.1;
+            gstBox.Text = gst.ToString("C");
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
