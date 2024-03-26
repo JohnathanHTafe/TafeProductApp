@@ -39,6 +39,11 @@ namespace ProductApps
             {
                 MessageBox.Show("Enter data again", "Data Entry Error");
             }
+            double delivery;
+            double payment;           
+            payment = double.Parse(totalPaymentTextBlock.Text);           
+            delivery = payment + 25;
+            totalChargeTextBox.Text = delivery.ToString("C");
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
