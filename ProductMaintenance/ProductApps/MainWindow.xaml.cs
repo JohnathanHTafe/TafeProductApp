@@ -42,12 +42,15 @@ namespace ProductApps
             double totalCharge;
             double totalPayment;
             double totalWrap;
+            double GSTTotal;
             totalPayment = Convert.ToDouble(totalPaymentTextBlock.Text);
 
             totalCharge = totalPayment + 25;
             totalWrap = totalPayment + 25 + 5;
             TotalChargeTextBlock.Text = totalCharge.ToString("C");
             wrapChargeBox.Text = totalWrap.ToString("C");
+            GSTTotal = (totalPayment + 25 + 5) * 1.1;
+            GstTextBlock.Text = GSTTotal.ToString("C");
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
