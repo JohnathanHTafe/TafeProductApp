@@ -41,12 +41,13 @@ namespace ProductApps
             }
             double totalCharge;
             double totalPayment;
+            double totalWrap;
             totalPayment = Convert.ToDouble(totalPaymentTextBlock.Text);
 
             totalCharge = totalPayment + 25;
-
+            totalWrap = totalPayment + 25 + 5;
             TotalChargeTextBlock.Text = totalCharge.ToString("C");
-            
+            wrapChargeBox.Text = totalWrap.ToString("C");
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
